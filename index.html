@@ -155,11 +155,18 @@
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
+                    <input onsubmit="showMessage(); return false;">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your mail" required>
                     <textarea name="message" rows="6" placeholder="Your message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span onclick="closePopup()" class="close-btn">&times;</span>span>
+                        <p><i class="fa-solid fa-square-check"></i> Thank you! Your message has been submitted.</p>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -168,6 +175,15 @@
         <p>Copyright by OMP <i class="fa-solid fa-heart"></i> </p>
     </div>
 </div>
+<script>
+    function showPopup(){
+        document.getElementById("popup").style.display="flex";
+    }
+
+    function closePopup(){
+        document.getElementById("popup").style.display="none";
+    }
+</script>
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
