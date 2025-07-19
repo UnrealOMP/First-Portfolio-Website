@@ -308,25 +308,27 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
-/* Popup Background */
+/* Popup Overlay */
 .popup {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  font-family: 'Poppins', sans-serif; /* Matches your site font */
 }
 
 /* Popup Content Box */
 .popup-content {
-  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Matches modern gradient */
-  color: #fff;
+  background: #000000; /* Black background */
+  color: #ffffff;      /* White text */
+  border: 2px solid #ffffff20; /* Subtle white border with transparency */
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1); /* Soft white glow */
   animation: popupAnimation 0.4s ease-out;
   position: relative;
   width: 90%;
@@ -336,17 +338,23 @@ form .btn2{
 /* Popup Icon */
 .popup-icon {
   font-size: 50px;
+  color: #00ff88; /* Vibrant green tick for success */
   margin-bottom: 10px;
 }
 
-/* Close Button */
+/* Close Button (X) */
 .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 25px;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #00ff88; /* Highlight close button on hover */
 }
 
 /* Popup Animation */
