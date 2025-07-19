@@ -308,6 +308,58 @@ form .btn2{
     margin-top: 20px;
     cursor: pointer;
 }
+/* Popup Background */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup Content Box */
+.popup-content {
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Matches modern gradient */
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: popupAnimation 0.4s ease-out;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Popup Icon */
+.popup-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Popup Animation */
+@keyframes popupAnimation {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .copyright{
     width: 100%;
     text-align: center;
