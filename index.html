@@ -206,6 +206,9 @@
 
   form.addEventListener('submit', e => {
     e.preventDefault();
+    document.getElementById("popup").style.display="flex";
+
+      
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {console.log('Success!', response);
       form.reset();
